@@ -27,6 +27,19 @@ Set `NEXT_PUBLIC_SITE_URL` to your production URL (e.g. `https://linda-website-n
 
 Connect the repo to Vercel and import as a **Next.js** project. Pushes to `main` trigger deployments.
 
+### If the live site shows only “404 NOT_FOUND”
+
+This usually means the project is still using the **old static-site** settings (from when the repo was only `index.html`).
+
+1. Vercel → your project → **Settings** → **General** → **Build & Development Settings**.
+2. **Framework Preset:** set to **Next.js** (not “Other”).
+3. **Root Directory:** leave **empty** (unless the app lives in a subfolder).
+4. **Output Directory:** leave **empty** — Vercel fills this for Next.js automatically. If it says `out`, `dist`, `public`, or `.`, clear it.
+5. **Build Command:** leave default (`next build`) or empty so Vercel auto-detects.
+6. Save, then **Deployments** → **⋯** on the latest deploy → **Redeploy** (or push an empty commit).
+
+A screenshot of your Build & Development Settings is enough to confirm if something is still wrong; you don’t need a screenshot of the 404 page itself.
+
 If Git is not configured yet:
 
 ```powershell

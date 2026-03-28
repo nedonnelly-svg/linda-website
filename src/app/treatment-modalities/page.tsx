@@ -3,68 +3,79 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Treatment modalities",
+  title: "EMDR, TRM & Trauma-Focused Therapy Methods",
   description:
-    "AF-EMDR, TRM, CPT, brief and complex psychotherapy, and ongoing wellness-focused care.",
+    "How AF-EMDR, Trauma Resiliency Model (TRM), CPT, and broader psychotherapy fit together in trauma treatment with Dr. Linda Hoffman, PsyD.",
+  alternates: { canonical: "/treatment-modalities" },
+  keywords: [
+    "EMDR therapy online",
+    "AF-EMDR",
+    "Trauma Resiliency Model",
+    "CPT therapy",
+    "trauma-focused CBT",
+  ],
 };
 
 export default function TreatmentModalitiesPage() {
   return (
     <PageShell>
-      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">Treatment modalities</h1>
+      <h1 className="font-serif text-3xl italic text-text md:text-[2.65rem]">
+        How we might work together
+      </h1>
+      <p className="mt-5 max-w-2xl text-lg text-muted">
+        There isn&apos;t one &quot;magic&quot; protocol for every person. There <em>are</em>{" "}
+        evidence-based trauma therapies that tend to work better than generic talk therapy when the
+        body is stuck in survival mode. Below is a plain-language map; we choose specifics together.
+      </p>
+
       <div className="content-block mt-8">
+        <h2>Trauma-focused methods (often central to care)</h2>
         <p>
-          I offer a number of services to meet different needs. What follows is an overview; we can
-          discuss which approach fits you during a consultation.
+          After trauma, the nervous system can misread safe situations as dangerous — the classic
+          &quot;triggered&quot; experience that logic alone can&apos;t talk you out of. I draw on
+          methods designed for that, including{" "}
+          <strong>Attachment-Focused EMDR (AF-EMDR)</strong>, the{" "}
+          <strong>Trauma Resiliency Model (TRM)</strong>, and{" "}
+          <strong>Cognitive Processing Therapy (CPT)</strong>, alone or in combination.
+        </p>
+        <p>
+          EMDR sessions may run longer than standard therapy hours when clinically appropriate; we
+          discuss pacing and what to expect up front.
         </p>
 
-        <h2>Trauma therapy</h2>
+        <h2>Brief, focused psychotherapy</h2>
         <p>
-          Traumatic experiences can reorganize your nervous system to be more sensitive to cues of
-          danger and set off your natural alarm system when no danger is present. We commonly refer
-          to this experience as &quot;being triggered.&quot; This effect happens outside of
-          conscious awareness and control, which is why regular &quot;talk therapies&quot; are often
-          ineffective in treating trauma. I may use one or a combination of the following approaches
-          to help you: Attachment-Focused Eye Movement Desensitization and Reprocessing (AF-EMDR),
-          the Trauma Resiliency Model (TRM), and Cognitive Processing Therapy (CPT). These
-          approaches can be integrated into complex psychotherapy, be the sole focus of brief
-          psychotherapy, or done as adjuncts to your work with another therapist.
+          Sometimes one clearly defined problem needs a time-limited, structured plan — often on the
+          order of several months. Brief work targets relief and behavior change; it&apos;s not the
+          same as deeper trauma processing, and we&apos;ll be honest if your goals call for something
+          broader.
         </p>
 
-        <h2>Brief psychotherapy</h2>
+        <h2>Longer-term / complex psychotherapy</h2>
         <p>
-          In brief work, we usually focus on one issue within a limited time frame. The number of
-          sessions will depend on the kind of issue that we choose to address, but brief therapy is
-          commonly 8–12 sessions. These sessions focus on behavioral changes and are directive and
-          solution-focused. Brief therapy rarely results in the deeper healing and self-discovery
-          that complex therapy provides, but it can offer symptom relief and allow you to make real
-          progress in stuck areas of your life.
+          When several life areas overlap — relationships, self-worth, mood, identity, recurring
+          crises — therapy may unfold more gradually. You set direction; I bring trauma training and
+          clinical judgment. The process is less predictable week to week, but the aim is durable
+          change, not a quick patch.
         </p>
 
-        <h2>Complex psychotherapy</h2>
+        <h2>Ongoing &quot;life support&quot; therapy</h2>
         <p>
-          Many people come to therapy with a constellation of issues that are interrelated and
-          require time and patience to sort, but symptom relief is still the primary goal. In
-          complex psychotherapy, there may or may not be a focus on specific diagnoses. The work is
-          less predictable than brief psychotherapy as it involves a process of self-discovery where
-          you lead and I follow. Personal growth and behavioral change will occur by deconstructing
-          facades and identifying your values so that you may reconnect with and embrace your real
-          self.
-        </p>
-
-        <h2>&quot;Life support&quot;</h2>
-        <p>
-          The medicalization of psychotherapy has led many to assume that psychotherapy is only
-          about symptom reduction, but there is a long tradition of providing psychotherapy as a
-          means of self-care and for sustaining health and wellness. You may prefer this approach if
-          you desire a safe, confidential place to give conscious attention to questions about how
-          you&apos;re living your life. This is also an approach that many who have successfully
-          completed brief or complex psychotherapy choose to pursue. This type of therapy is most
-          likely not covered by insurance.
+          Some clients want a steady, confidential space for maintenance and depth after acute
+          symptoms improve — similar to how people invest in physical wellness long-term. This model
+          may not align with insurance expectations; we cover that transparently before you commit.
         </p>
 
         <p>
-          <Link href="/contact">Request your free phone consultation</Link> to discuss next steps.
+          Questions about fit?{" "}
+          <Link href="/faq" className="font-semibold">
+            Read the FAQ
+          </Link>{" "}
+          or{" "}
+          <Link href="/contact" className="font-semibold">
+            schedule a consultation
+          </Link>
+          .
         </p>
       </div>
     </PageShell>

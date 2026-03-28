@@ -3,50 +3,66 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Therapy for entertainment industry professionals",
+  title: "Therapy for Entertainment Professionals — Trauma-Informed",
   description:
-    "Trauma therapy with insider understanding of film and television — tailored support for creative professionals.",
+    "Trauma therapy for people in film, TV, and media: high stakes, public identity, and old survival patterns. Dr. Linda Hoffman, PsyD — online in CA & NY.",
+  alternates: { canonical: "/entertainment-industry-professionals" },
 };
 
 export default function EntertainmentPage() {
   return (
     <PageShell>
-      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">
-        Therapy for entertainment industry professionals
+      <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+        Specialty focus · Same core: trauma therapy
+      </p>
+      <h1 className="mt-3 font-serif text-3xl italic leading-tight text-text md:text-[2.65rem]">
+        When your career amplifies everything underneath
       </h1>
       <div className="content-block mt-8">
-        <p className="tagline">Creative people. Creative solutions.</p>
         <p>
-          You&apos;re not generic. Your therapy shouldn&apos;t be either. Every problem is as unique
-          as the person experiencing it, so the solutions need to be individualized, personally
-          relevant, and guided by who you are.
+          This page isn&apos;t a separate &quot;brand&quot; of therapy — it&apos;s for people whose work
+          in <strong>entertainment and media</strong> adds a specific kind of pressure on top of what
+          they&apos;re already carrying. My practice is still anchored in{" "}
+          <Link href="/trauma-recovery" className="font-semibold">
+            trauma therapy
+          </Link>
+          , EMDR-informed care, and nervous-system work.
         </p>
-        <h2>Why I work with entertainment industry professionals</h2>
+
+        <h2>Why industry experience changes the conversation</h2>
         <p>
-          I understand firsthand the unique pressures of working in Hollywood after spending many
-          years in film and television development myself. While the excitement of contributing
-          creatively to influential projects can be deeply rewarding, it also comes with intense
-          demands, relentless expectations, and challenging interpersonal dynamics. For many in
-          entertainment, your work isn&apos;t merely a job — it&apos;s a core part of your identity.
+          I spent years in film and television development before becoming a psychologist. I don&apos;t
+          need a long explanation of pitch rooms, unstable schedules, power dynamics, or what it feels
+          like when your livelihood and identity blur. That context means we spend less time
+          translating your world — and more time doing the actual therapeutic work.
+        </p>
+
+        <h2>What clients here are often sorting out</h2>
+        <ul>
+          <li>High visibility or high-stakes environments that keep the nervous system on high alert.</li>
+          <li>
+            Old trauma patterns resurfacing through conflict, rejection sensitivity, perfectionism, or
+            burnout.
+          </li>
+          <li>
+            Relationship strain at work or at home when stress has nowhere safe to land.
+          </li>
+          <li>
+            A sense that you &quot;should&quot; be grateful — while still feeling depleted or disconnected.
+          </li>
+        </ul>
+
+        <h2>Next step</h2>
+        <p>
+          If this resonates, start with the same pathway as every client: a{" "}
+          <Link href="/contact" className="font-semibold">
+            free phone consultation
+          </Link>
+          . We&apos;ll see if trauma-focused therapy is the right fit for what you&apos;re facing right
+          now.
         </p>
         <p>
-          Unfortunately, the high-stakes environment of Hollywood often resonates strongly with
-          unresolved past traumas. Without realizing it, you may find yourself repeating patterns from
-          earlier life experiences, leaving you feeling stuck, overwhelmed, or disconnected. My
-          specialized training in trauma therapy, combined with my insider understanding of the
-          entertainment industry, allows me to provide tailored support that addresses the unique
-          ways trauma impacts your life and career.
-        </p>
-        <p>
-          Whether you sense something is off in how you respond to stressors, or you&apos;re
-          clearly aware that unresolved trauma is affecting your professional or personal life,
-          I&apos;m here to help you move beyond your past experiences, reclaim clarity, and reconnect
-          with a life you truly love.
-        </p>
-        <p>
-          Explore <Link href="/trauma-recovery">trauma recovery</Link>,{" "}
-          <Link href="/treatment-modalities">treatment modalities</Link>, or{" "}
-          <Link href="/contact">request a consultation</Link>.
+          <Link href="/trauma-recovery">← Back to trauma therapy overview</Link>
         </p>
       </div>
     </PageShell>

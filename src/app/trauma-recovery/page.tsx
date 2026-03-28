@@ -3,44 +3,90 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Trauma recovery therapy",
+  title: "Trauma Therapy & EMDR — Online in California & New York",
   description:
-    "Trauma-informed care with EMDR and TRM. Healing that works with how trauma is stored in your nervous system.",
+    "What trauma therapy is, how EMDR and somatic approaches differ from general counseling, and how to start with Dr. Linda Hoffman, PsyD. Telehealth for CA & NY.",
+  alternates: { canonical: "/trauma-recovery" },
+  openGraph: {
+    title: "Trauma Therapy & EMDR | Dr. Linda Hoffman, PsyD",
+    description:
+      "Online trauma therapy for adults in California and New York. EMDR, TRM, and nervous-system-informed psychotherapy.",
+  },
 };
 
 export default function TraumaRecoveryPage() {
   return (
     <PageShell>
-      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">Trauma recovery therapy</h1>
-      <div className="content-block mt-8">
-        <p className="tagline">Your story. Your strength.</p>
+      <h1 className="font-serif text-[1.75rem] italic leading-tight text-text sm:text-4xl md:text-[2.65rem]">
+        Trauma therapy that updates your nervous system — not just your vocabulary
+      </h1>
+      <p className="mt-5 max-w-2xl text-lg text-muted">
+        Most people who reach out aren&apos;t chasing a diagnosis label. They want relief from patterns
+        that won&apos;t budge: hypervigilance, shutdown, relationship friction, shame spirals, or feeling
+        &quot;fine&quot; on the outside while running on fumes inside. That&apos;s the territory{" "}
+        <strong className="text-text">trauma therapy</strong> is built for.
+      </p>
+
+      <div className="content-block mt-10">
+        <h2>What &quot;trauma therapy&quot; means in my practice</h2>
         <p>
-          Trauma doesn&apos;t define you, but it can shape how you move through the world. Healing
-          isn&apos;t about erasing the past; it&apos;s about reclaiming your future.
-        </p>
-        <h2>Why work with a trauma specialist?</h2>
-        <p>
-          Trauma isn&apos;t just something that happened to you. It&apos;s something that continues to
-          live in your body, your reactions, and the ways you protect yourself — sometimes without
-          even realizing it. You may tell yourself it &quot;wasn&apos;t that bad,&quot; that you
-          should &quot;be over it by now,&quot; or that others have had it worse. But trauma
-          isn&apos;t measured by what happened. It&apos;s measured by its impact. That impact can show
-          up as anxiety, panic, numbness, difficulty trusting, perfectionism, feeling stuck, or
-          struggling in relationships. It can keep you from living the life you want — without you
-          even realizing that trauma is at the root of it.
-        </p>
-        <p>
-          Healing isn&apos;t about just talking through your experiences. It&apos;s about working
-          with how trauma has been stored in your nervous system. As a specialist in somatic-based
-          trauma therapies like EMDR and the Trauma Resiliency Model (TRM), I help people process and
-          release trauma in ways that feel safe, effective, and lasting. Whether your trauma is
-          from childhood, a single event, or years of accumulated stress, recovery is possible. You
-          don&apos;t have to keep carrying it alone.
+          Trauma isn&apos;t defined by a single checklist of events. It&apos;s defined by how your
+          mind and body learned to survive — sometimes brilliantly — and how those survival strategies
+          may no longer match your present life. Trauma therapy helps your system recognize{" "}
+          <em>now</em> from <em>then</em>, so you can respond instead of react.
         </p>
         <p>
-          Read more about{" "}
-          <Link href="/treatment-modalities">how I work and treatment modalities</Link>, or{" "}
-          <Link href="/contact">get in touch</Link> when you&apos;re ready.
+          Because trauma often lives below conscious storytelling, insight alone usually isn&apos;t
+          enough. That&apos;s why I emphasize approaches that work with arousal, memory processing, and
+          body-based regulation — alongside thoughtful conversation.
+        </p>
+
+        <h2>Who tends to do well with this work</h2>
+        <ul>
+          <li>Adults in <strong>California or New York</strong> who want <strong>online therapy</strong> with a licensed psychologist.</li>
+          <li>
+            People who suspect (or know) past experiences are shaping anxiety, depression, dissociation,
+            relationship patterns, or performance under pressure.
+          </li>
+          <li>
+            Anyone who has done &quot;talk therapy&quot; before and wants a trauma specialist for the next
+            phase — including EMDR or somatically informed work.
+          </li>
+        </ul>
+
+        <h2>EMDR, TRM, and why method matters</h2>
+        <p>
+          I&apos;m trained in trauma-focused methods including{" "}
+          <strong>Attachment-Focused EMDR</strong> and the{" "}
+          <strong>Trauma Resiliency Model (TRM)</strong>, and I integrate other evidence-based tools
+          when they fit your goals. You don&apos;t need to pick a modality before we meet — that&apos;s
+          part of collaborative treatment planning.
+        </p>
+        <p>
+          Details on session structure, length (including extended EMDR sessions when appropriate), and
+          other options are on the{" "}
+          <Link href="/treatment-modalities">EMDR &amp; therapy approaches</Link> page.
+        </p>
+
+        <h2>Telehealth trauma therapy: practical and private</h2>
+        <p>
+          I provide secure video sessions so geography within CA or NY doesn&apos;t become another
+          barrier. Many clients prefer telehealth because it fits demanding schedules and reduces the
+          stress of commuting after heavy sessions.
+        </p>
+
+        <h2>What happens first</h2>
+        <p>
+          We begin with a <strong>free phone consultation</strong> so you can ask questions, hear how I
+          work, and decide if scheduling an intake makes sense. If we move forward, early sessions
+          focus on safety, goals, and a plan — paced to your readiness, not a one-size-fits-all
+          timeline.
+        </p>
+        <p>
+          Ready to talk?{" "}
+          <Link href="/contact" className="font-semibold">
+            Request your consultation →
+          </Link>
         </p>
       </div>
     </PageShell>

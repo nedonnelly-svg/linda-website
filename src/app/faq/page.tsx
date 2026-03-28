@@ -3,9 +3,10 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "FAQ — fees, insurance & trauma therapy sessions",
   description:
-    "Frequently asked questions about therapy, sessions, fees, insurance, and getting started.",
+    "Session length, EMDR appointments, out-of-network insurance, fees, and how to start trauma therapy online with Dr. Linda Hoffman in CA or NY.",
+  alternates: { canonical: "/faq" },
 };
 
 export default function FaqPage() {

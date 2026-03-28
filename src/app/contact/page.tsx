@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Free phone consultation — start trauma therapy",
   description:
-    "Request a free phone consultation. Telehealth in California and New York. Phone, fax, and forms.",
+    "Request a free consultation for online trauma therapy in California or New York. Phone, fax, and patient forms for Dr. Linda Hoffman, PsyD.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
     <PageShell>
-      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">Contact</h1>
+      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">
+        Start with a conversation
+      </h1>
       <div className="content-block mt-8">
         <p>
           To request your free phone consultation, you may contact me at the number below or submit

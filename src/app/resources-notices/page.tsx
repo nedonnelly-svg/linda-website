@@ -3,9 +3,10 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Resources & notices",
+  title: "Resources, privacy & crisis information",
   description:
-    "Emergency response information, privacy practices, and No Surprises Act / Good Faith Estimate notices.",
+    "Emergency planning, Notice of Privacy Practices, Good Faith Estimate / No Surprises Act information for Dr. Linda Hoffman’s trauma therapy practice.",
+  alternates: { canonical: "/resources-notices" },
 };
 
 export default function ResourcesNoticesPage() {

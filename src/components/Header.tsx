@@ -3,15 +3,9 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const services = [
-  { href: "/trauma-recovery", label: "Trauma recovery" },
-  { href: "/entertainment-industry-professionals", label: "Entertainment industry" },
-  { href: "/treatment-modalities", label: "Treatment modalities" },
-];
-
 const aboutLinks = [
-  { href: "/experience", label: "Experience" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/experience", label: "Credentials & background" },
+  { href: "/faq", label: "FAQ & fees" },
 ];
 
 function DropdownPanel({ children }: { children: React.ReactNode }) {
@@ -22,20 +16,20 @@ function DropdownPanel({ children }: { children: React.ReactNode }) {
   );
 }
 
+const navLinkClass = "text-sm text-muted hover:text-accent";
+const navLinkAccent =
+  "rounded-full border border-accent/35 bg-accent/10 px-4 py-1.5 text-sm font-semibold text-accent hover:bg-accent/20";
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobilePanel, setMobilePanel] = useState<string | null>(null);
 
-  const closeAll = () => {
-    setMobileOpen(false);
-    setMobilePanel(null);
-  };
+  const closeAll = () => setMobileOpen(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-6">
         <Link href="/" className="text-sm font-semibold text-text hover:text-accent" onClick={closeAll}>
-          Above the Line Psychotherapy
+          Dr. Linda Hoffman · Trauma therapy
         </Link>
 
         <button
@@ -48,40 +42,23 @@ export function Header() {
           {mobileOpen ? "Close" : "Menu"}
         </button>
 
-        {/* Desktop */}
-        <nav
-          className="hidden items-center gap-6 md:flex"
-          aria-label="Main"
-        >
-          <Link href="/" className="text-sm text-muted hover:text-accent">
+        <nav className="hidden flex-wrap items-center gap-x-5 gap-y-2 md:flex" aria-label="Main">
+          <Link href="/" className={navLinkClass}>
             Home
           </Link>
-
+          <Link href="/trauma-recovery" className={`${navLinkClass} font-medium text-text`}>
+            Trauma therapy
+          </Link>
+          <Link href="/treatment-modalities" className={navLinkClass}>
+            EMDR &amp; approaches
+          </Link>
+          <Link href="/entertainment-industry-professionals" className={navLinkClass}>
+            Creatives &amp; entertainment
+          </Link>
           <div className="group relative">
             <button
               type="button"
-              className="flex items-center gap-1 text-sm text-muted hover:text-accent"
-              aria-haspopup="true"
-            >
-              Services
-            </button>
-            <DropdownPanel>
-              {services.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-md px-3 py-2 text-sm text-text hover:bg-white/5 hover:text-accent"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </DropdownPanel>
-          </div>
-
-          <div className="group relative">
-            <button
-              type="button"
-              className="flex items-center gap-1 text-sm text-muted hover:text-accent"
+              className={`flex items-center gap-1 ${navLinkClass}`}
               aria-haspopup="true"
             >
               About
@@ -98,30 +75,15 @@ export function Header() {
               ))}
             </DropdownPanel>
           </div>
-
-          <Link href="/resources-notices" className="text-sm text-muted hover:text-accent">
+          <Link href="/resources-notices" className={navLinkClass}>
             Resources
           </Link>
-
-          <Link
-            href="/contact"
-            className="rounded-full border border-white/15 bg-surface px-4 py-1.5 text-sm font-medium text-text hover:border-accent/40 hover:text-accent"
-          >
-            Contact
+          <Link href="/contact" className={navLinkAccent}>
+            Free consultation
           </Link>
-
-          <a
-            href="https://www.drlindahoffman.com/"
-            className="text-sm text-muted/80 hover:text-accent"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Official site ↗
-          </a>
         </nav>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <nav
           id="site-navigation"
@@ -131,62 +93,35 @@ export function Header() {
           <Link href="/" className="py-2 text-sm text-muted hover:text-accent" onClick={closeAll}>
             Home
           </Link>
-          <button
-            type="button"
-            className="flex w-full items-center justify-between py-2 text-left text-sm text-muted"
-            onClick={() => setMobilePanel((p) => (p === "svc" ? null : "svc"))}
-          >
-            Services
-            <span>{mobilePanel === "svc" ? "−" : "+"}</span>
-          </button>
-          {mobilePanel === "svc" &&
-            services.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="border-l border-white/10 py-2 pl-4 text-sm text-text hover:text-accent"
-                onClick={closeAll}
-              >
-                {item.label}
-              </Link>
-            ))}
-          <button
-            type="button"
-            className="flex w-full items-center justify-between py-2 text-left text-sm text-muted"
-            onClick={() => setMobilePanel((p) => (p === "ab" ? null : "ab"))}
-          >
-            About
-            <span>{mobilePanel === "ab" ? "−" : "+"}</span>
-          </button>
-          {mobilePanel === "ab" &&
-            aboutLinks.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="border-l border-white/10 py-2 pl-4 text-sm text-text hover:text-accent"
-                onClick={closeAll}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <Link href="/trauma-recovery" className="py-2 text-sm font-medium text-text" onClick={closeAll}>
+            Trauma therapy
+          </Link>
+          <Link href="/treatment-modalities" className="py-2 text-sm text-muted hover:text-accent" onClick={closeAll}>
+            EMDR &amp; approaches
+          </Link>
           <Link
-            href="/resources-notices"
+            href="/entertainment-industry-professionals"
             className="py-2 text-sm text-muted hover:text-accent"
             onClick={closeAll}
           >
+            Creatives &amp; entertainment
+          </Link>
+          {aboutLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="py-2 text-sm text-muted hover:text-accent"
+              onClick={closeAll}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/resources-notices" className="py-2 text-sm text-muted hover:text-accent" onClick={closeAll}>
             Resources
           </Link>
-          <Link href="/contact" className="py-2 text-sm font-medium text-accent" onClick={closeAll}>
-            Contact
+          <Link href="/contact" className="py-2 text-sm font-semibold text-accent" onClick={closeAll}>
+            Free consultation
           </Link>
-          <a
-            href="https://www.drlindahoffman.com/"
-            className="py-2 text-sm text-muted/80"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Official site ↗
-          </a>
         </nav>
       )}
     </header>

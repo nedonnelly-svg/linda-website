@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Experience",
+  title: "Credentials & experience — trauma therapist",
   description:
-    "Education, certifications, clinical experience, and professional background for Dr. Linda Hoffman, PsyD.",
+    "PsyD, EMDR and TRM training, university and community clinical roles, and background in entertainment — Dr. Linda Hoffman’s qualifications as a trauma-focused psychologist.",
+  alternates: { canonical: "/experience" },
 };
 
 export default function ExperiencePage() {
   return (
     <PageShell>
-      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">Experience</h1>
+      <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">
+        Credentials &amp; experience
+      </h1>
       <div className="content-block mt-8">
         <h2>Education</h2>
         <ul>

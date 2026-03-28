@@ -1,4 +1,4 @@
-# Spec website
+# Linda website
 
 Static one-page spec you can customize and deploy from GitHub with Vercel.
 
@@ -25,7 +25,7 @@ git config --global user.email "your@email.com"
 2. In PowerShell, from this folder:
 
 ```powershell
-cd C:\Users\troup\.cursor\spec-website
+cd C:\Users\troup\.cursor\linda-website
 git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
 git branch -M main
 git push -u origin main

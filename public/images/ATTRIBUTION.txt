@@ -1,0 +1,8 @@
+Stock photos are from Unsplash (https://unsplash.com/license) — free to use, no attribution required; links below credit photographers.
+
+- hero-calm-interior.jpg — https://unsplash.com/photos/1618221195710-dd6b41faaea6
+- banner-mountains.jpg — https://unsplash.com/photos/1506905925346-21bda4d32df4
+- telehealth-cozy.jpg — https://unsplash.com/photos/1518241353330-0f7941c2d9b5
+- accent-plants.jpg — https://unsplash.com/photos/1416879595882-3373a0480b5b
+
+Replace these files anytime with your own photography or licensed assets.

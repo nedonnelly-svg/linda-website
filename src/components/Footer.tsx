@@ -30,6 +30,18 @@ export function Footer() {
             </p>
           </div>
         </div>
+        <p className="mt-6 text-xs text-muted/60">
+          Stock photography from{" "}
+          <a
+            href="https://unsplash.com/license"
+            className="text-accent hover:underline"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Unsplash
+          </a>
+          ; images are illustrative only and do not depict the provider, office, or clients.
+        </p>
         <p className="mt-8 border-t border-white/10 pt-6 text-xs text-muted/80">
           If you are in crisis, call 988 or 911, or text HOME to 741741. This site is not monitored for
           emergencies.

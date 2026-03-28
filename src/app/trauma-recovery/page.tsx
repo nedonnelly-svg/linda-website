@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
+import { SiteFigure } from "@/components/SiteFigure";
 
 export const metadata: Metadata = {
   title: "Trauma Therapy & EMDR — Online in California & New York",
@@ -17,15 +18,27 @@ export const metadata: Metadata = {
 export default function TraumaRecoveryPage() {
   return (
     <PageShell>
-      <h1 className="font-serif text-[1.75rem] italic leading-tight text-text sm:text-4xl md:text-[2.65rem]">
-        Trauma therapy that updates your nervous system — not just your vocabulary
-      </h1>
-      <p className="mt-5 max-w-2xl text-lg text-muted">
-        Most people who reach out aren&apos;t chasing a diagnosis label. They want relief from patterns
-        that won&apos;t budge: hypervigilance, shutdown, relationship friction, shame spirals, or feeling
-        &quot;fine&quot; on the outside while running on fumes inside. That&apos;s the territory{" "}
-        <strong className="text-text">trauma therapy</strong> is built for.
-      </p>
+      <div className="grid gap-8 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-start md:gap-10">
+        <div>
+          <h1 className="font-serif text-[1.75rem] italic leading-tight text-text sm:text-4xl md:text-[2.65rem]">
+            Trauma therapy that updates your nervous system — not just your vocabulary
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg text-muted">
+            Most people who reach out aren&apos;t chasing a diagnosis label. They want relief from
+            patterns that won&apos;t budge: hypervigilance, shutdown, relationship friction, shame
+            spirals, or feeling &quot;fine&quot; on the outside while running on fumes inside.
+            That&apos;s the territory <strong className="text-text">trauma therapy</strong> is built
+            for.
+          </p>
+        </div>
+        <SiteFigure
+          src="/images/telehealth-cozy.jpg"
+          alt="Comfortable home setting with a warm drink — suggesting private online therapy from your own space"
+          frameClassName="aspect-[4/5] min-h-[200px]"
+          sizes="(max-width: 768px) 100vw, 36vw"
+          caption="Stock photo — not a depiction of a specific client or session."
+        />
+      </div>
 
       <div className="content-block mt-10">
         <h2>What &quot;trauma therapy&quot; means in my practice</h2>

@@ -14,6 +14,13 @@ Then visit the URL shown (often `http://localhost:3000`).
 
 ## GitHub
 
+If Git has never been configured on this machine, run once (use your real name and email):
+
+```powershell
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
 1. Create a new empty repository on [GitHub](https://github.com/new) (no README/license if you will push this folder as the first commit).
 2. In PowerShell, from this folder:
 

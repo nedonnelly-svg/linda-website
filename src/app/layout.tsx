@@ -3,6 +3,7 @@ import { DM_Sans, Instrument_Serif } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SeoJsonLd } from "@/components/SeoJsonLd";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -21,9 +22,7 @@ const siteDescription =
   "Licensed trauma therapist offering online trauma therapy in California and New York. EMDR, TRM, and nervous-system-informed care with Dr. Linda Hoffman, PsyD. Request a free phone consultation.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://linda-website-navy.vercel.app",
-  ),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "Online Trauma Therapy in California & New York | Dr. Linda Hoffman, PsyD",
     template: "%s | Trauma Therapy — Dr. Linda Hoffman",

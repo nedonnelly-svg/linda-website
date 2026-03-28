@@ -1,7 +1,7 @@
-const DEFAULT_ORIGIN = "https://linda-website-navy.vercel.app";
+import { getSiteUrl } from "@/lib/site-url";
 
 export function SeoJsonLd() {
-  const base = (process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_ORIGIN).replace(/\/$/, "");
+  const base = getSiteUrl().replace(/\/$/, "");
 
   const graph = [
     {

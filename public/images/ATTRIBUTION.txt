@@ -4,5 +4,7 @@ Stock photos are from Unsplash (https://unsplash.com/license) — free to use, n
 - banner-mountains.jpg — https://unsplash.com/photos/1506905925346-21bda4d32df4
 - telehealth-cozy.jpg — https://unsplash.com/photos/1518241353330-0f7941c2d9b5
 - accent-plants.jpg — https://unsplash.com/photos/1416879595882-3373a0480b5b
+- entertainment-film-desk.jpg — https://unsplash.com/photos/1485846234645-a62644f84728
+- entertainment-stage-lights.jpg — https://unsplash.com/photos/1503095396549-807759245b35
 
 Replace these files anytime with your own photography or licensed assets.

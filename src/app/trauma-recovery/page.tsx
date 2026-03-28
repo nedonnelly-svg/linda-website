@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { SiteFigure } from "@/components/SiteFigure";
@@ -40,7 +41,23 @@ export default function TraumaRecoveryPage() {
         />
       </div>
 
-      <div className="content-block mt-10">
+      <div className="relative mt-12 overflow-hidden rounded-2xl border border-white/10 shadow-xl shadow-black/30">
+        <div className="relative aspect-[21/9] min-h-[160px] w-full md:min-h-[200px]">
+          <Image
+            src="/images/banner-mountains.jpg"
+            alt="Mountain ridges in soft light — space, distance, and a sense of perspective"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-bg/80 via-transparent to-bg/50"
+            aria-hidden
+          />
+        </div>
+      </div>
+
+      <div className="content-block mt-12">
         <h2>What &quot;trauma therapy&quot; means in my practice</h2>
         <p>
           Trauma isn&apos;t defined by a single checklist of events. It&apos;s defined by how your
@@ -54,18 +71,32 @@ export default function TraumaRecoveryPage() {
           body-based regulation — alongside thoughtful conversation.
         </p>
 
-        <h2>Who tends to do well with this work</h2>
-        <ul>
-          <li>Adults in <strong>California or New York</strong> who want <strong>online therapy</strong> with a licensed psychologist.</li>
-          <li>
-            People who suspect (or know) past experiences are shaping anxiety, depression, dissociation,
-            relationship patterns, or performance under pressure.
-          </li>
-          <li>
-            Anyone who has done &quot;talk therapy&quot; before and wants a trauma specialist for the next
-            phase — including EMDR or somatically informed work.
-          </li>
-        </ul>
+        <div className="my-10 grid items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-10">
+          <SiteFigure
+            src="/images/accent-plants.jpg"
+            alt="Green leaves in gentle light — a quiet metaphor for growth and regulation"
+            frameClassName="aspect-[4/5] min-h-[220px]"
+            sizes="(max-width: 768px) 100vw, 40vw"
+            caption="Stock photo — decorative only."
+          />
+          <div>
+            <h2 className="!mt-0">Who tends to do well with this work</h2>
+            <ul>
+              <li>
+                Adults in <strong>California or New York</strong> who want{" "}
+                <strong>online therapy</strong> with a licensed psychologist.
+              </li>
+              <li>
+                People who suspect (or know) past experiences are shaping anxiety, depression,
+                dissociation, relationship patterns, or performance under pressure.
+              </li>
+              <li>
+                Anyone who has done &quot;talk therapy&quot; before and wants a trauma specialist for the
+                next phase — including EMDR or somatically informed work.
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <h2>EMDR, TRM, and why method matters</h2>
         <p>
@@ -81,12 +112,23 @@ export default function TraumaRecoveryPage() {
           <Link href="/treatment-modalities">EMDR &amp; therapy approaches</Link> page.
         </p>
 
-        <h2>Telehealth trauma therapy: practical and private</h2>
-        <p>
-          I provide secure video sessions so geography within CA or NY doesn&apos;t become another
-          barrier. Many clients prefer telehealth because it fits demanding schedules and reduces the
-          stress of commuting after heavy sessions.
-        </p>
+        <div className="my-10 grid items-start gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-10">
+          <div>
+            <h2 className="!mt-0">Telehealth trauma therapy: practical and private</h2>
+            <p>
+              I provide secure video sessions so geography within CA or NY doesn&apos;t become another
+              barrier. Many clients prefer telehealth because it fits demanding schedules and reduces the
+              stress of commuting after heavy sessions.
+            </p>
+          </div>
+          <SiteFigure
+            src="/images/hero-calm-interior.jpg"
+            alt="Bright, minimal interior with soft daylight — calm setting for reflection between sessions"
+            frameClassName="aspect-[4/5] min-h-[220px]"
+            sizes="(max-width: 768px) 100vw, 40vw"
+            caption="Stock photo — not the provider’s office."
+          />
+        </div>
 
         <h2>What happens first</h2>
         <p>

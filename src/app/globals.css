@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f1419;
+  --surface: #1a222c;
+  --text: #e8edf2;
+  --muted: #8b98a6;
+  --accent: #7eb8da;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: radial-gradient(
+    ellipse 120% 80% at 50% -20%,
+    rgba(126, 184, 218, 0.12),
+    transparent 55%
+  );
+  color: var(--text);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+/* Rich text blocks inside pages */
+.content-block :where(p) {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 65ch;
+}
+
+.content-block :where(p:last-child) {
+  margin-bottom: 0;
+}
+
+.content-block :where(ul, ol) {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--text);
+}
+
+.content-block :where(li + li) {
+  margin-top: 0.5rem;
+}
+
+.content-block :where(a) {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.content-block :where(a:hover) {
+  text-decoration: underline;
+}
+
+.content-block :where(h2) {
+  margin: 2.5rem 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.content-block :where(h2:first-child) {
+  margin-top: 0;
+}
+
+.content-block :where(h3) {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.content-block .tagline {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}

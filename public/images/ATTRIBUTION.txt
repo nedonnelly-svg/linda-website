@@ -7,4 +7,6 @@ Stock photos are from Unsplash (https://unsplash.com/license) — free to use, n
 - entertainment-film-desk.jpg — https://unsplash.com/photos/1485846234645-a62644f84728
 - entertainment-stage-lights.jpg — https://unsplash.com/photos/1503095396549-807759245b35
 
+Treatment modalities (EMDR & approaches) page reuses: hero-calm-interior, banner-mountains, telehealth-cozy, accent-plants (same Unsplash sources as listed above).
+
 Replace these files anytime with your own photography or licensed assets.

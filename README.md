@@ -29,21 +29,17 @@ Connect the repo to Vercel and import as a **Next.js** project. Pushes to `main`
 
 ### If the live site shows only “404 NOT_FOUND”
 
-This repo uses **`output: 'export'`** in `next.config.ts`, so `npm run build` generates a static site in the **`out/`** folder. That works with Vercel even if the project was originally set up for plain HTML.
+This repo uses **`output: 'export'`** (see `next.config.ts`). `npm run build` writes the live site to **`out/`**.
 
-**Option A — Recommended:** Vercel → **Settings** → **Build & Development Settings**
+**`vercel.json` in the repo** pins Vercel to:
 
-- **Framework Preset:** **Next.js**
-- **Root Directory:** empty
-- **Output Directory:** **empty** (Vercel detects static export and uses `out/` automatically)
-- **Build Command:** default / empty (`next build`)
-- Redeploy.
+- **Framework:** `null` (“Other”) so deployment is **static files from `out/`**, not a mis-detected preset.
+- **`outputDirectory`: `out`** (overrides wrong values in the dashboard).
+- **`buildCommand` / `installCommand`** so the build always runs.
 
-**Option B — If the preset stays on “Other”:** set **Output Directory** to **`out`**, **Build Command** to **`npm run build`**, **Install Command** to **`npm install`**, then redeploy.
+After pushing, trigger a **Redeploy** on Vercel. You can still switch the dashboard to **Next.js** later if you remove static export — until then, rely on `vercel.json`.
 
-Also ensure **Root Directory** is empty unless the app is in a subfolder.
-
-If `NEXT_PUBLIC_SITE_URL` is set in Vercel, it must be a full URL (e.g. `https://linda-website-navy.vercel.app`). An empty value is OK; a broken value can fail the build.
+If `NEXT_PUBLIC_SITE_URL` is set in Vercel, use a full URL (e.g. `https://linda-website-navy.vercel.app`); empty is fine.
 
 If Git is not configured yet:
 

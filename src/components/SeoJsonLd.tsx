@@ -50,7 +50,28 @@ export function SeoJsonLd() {
         { "@type": "State", name: "California" },
         { "@type": "State", name: "New York" },
       ],
-      // TODO (NAP): add `telephone` + `address` once the canonical phone number is confirmed.
+      telephone: "+1-213-537-4554",
+      faxNumber: "+1-213-260-2320",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Los Angeles",
+        addressRegion: "CA",
+        postalCode: "90025",
+        addressCountry: "US",
+      },
+      // State psychologist license numbers help verify the provider entity.
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          name: "California Psychologist License",
+          value: "PSY26518",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "New York Psychologist License",
+          value: "025036",
+        },
+      ],
     },
   ];
 

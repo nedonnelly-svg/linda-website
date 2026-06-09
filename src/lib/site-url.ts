@@ -13,5 +13,7 @@ export function getSiteUrl(): string {
   if (vercel) {
     return `https://${vercel}`;
   }
-  return "https://linda-website-navy.vercel.app";
+  // Production canonical domain. The new site is replacing the existing Weebly site at this
+  // address, so canonical URLs, sitemap, and JSON-LD should all point here once launched.
+  return "https://www.drlindahoffman.com";
 }

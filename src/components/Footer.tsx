@@ -7,6 +7,11 @@ export function Footer() {
             <p className="text-sm font-semibold text-text">Dr. Linda Hoffman, PsyD</p>
             <p className="mt-1 text-sm text-muted">Licensed clinical psychologist · Trauma-focused care</p>
             <p className="mt-3 text-sm text-muted">
+              <a href="tel:+12135374554" className="hover:text-accent">
+                (213) 537-4554
+              </a>
+            </p>
+            <p className="mt-1 text-sm text-muted">
               California PSY26518 · New York 025036
             </p>
           </div>

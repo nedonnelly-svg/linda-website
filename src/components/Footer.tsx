@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-white/10 py-10">
+    <footer className="mt-auto border-t border-border py-10">
       <div className="mx-auto max-w-3xl px-4 md:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
@@ -47,7 +47,7 @@ export function Footer() {
           </a>
           ; images are illustrative only and do not depict the provider, office, or clients.
         </p>
-        <p className="mt-8 border-t border-white/10 pt-6 text-xs text-muted/80">
+        <p className="mt-8 border-t border-border pt-6 text-xs text-muted/80">
           If you are in crisis, call 988 or 911, or text HOME to 741741. This site is not monitored for
           emergencies.
         </p>

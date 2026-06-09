@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0f1419;
-  --surface: #1a222c;
-  --text: #e8edf2;
-  --muted: #8b98a6;
-  --accent: #7eb8da;
-  --border: rgba(255, 255, 255, 0.08);
+  /* Warm Sand & Sage — light, grounding, calming palette */
+  --bg: #f7f3ec; /* warm cream */
+  --surface: #ffffff; /* soft white cards */
+  --text: #2e2a26; /* warm charcoal */
+  --muted: #6f6457; /* soft taupe */
+  --accent: #4f7a5f; /* deep sage green */
+  --border: rgba(46, 42, 38, 0.12); /* warm, subtle hairline */
 }
 
 @theme inline {
@@ -15,6 +16,7 @@
   --color-text: var(--text);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
+  --color-border: var(--border);
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), Georgia, serif;
 }
@@ -27,7 +29,7 @@ body {
   background-color: var(--bg);
   background-image: radial-gradient(
     ellipse 120% 80% at 50% -20%,
-    rgba(126, 184, 218, 0.12),
+    rgba(79, 122, 95, 0.1),
     transparent 55%
   );
   color: var(--text);

@@ -41,7 +41,7 @@ export default function EntertainmentPage() {
         />
       </div>
 
-      <div className="relative mt-12 overflow-hidden rounded-2xl border border-white/10 shadow-xl shadow-black/30">
+      <div className="relative mt-12 overflow-hidden rounded-2xl border border-border shadow-xl shadow-black/10">
         <div className="relative aspect-[21/9] min-h-[160px] w-full md:min-h-[220px]">
           <Image
             src="/images/entertainment-stage-lights.jpg"

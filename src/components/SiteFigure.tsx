@@ -23,7 +23,7 @@ export function SiteFigure({
   return (
     <figure className={className}>
       <div
-        className={`relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg shadow-black/20 ${frameClassName}`}
+        className={`relative w-full overflow-hidden rounded-2xl border border-border shadow-lg shadow-black/5 ${frameClassName}`}
       >
         <Image
           src={src}

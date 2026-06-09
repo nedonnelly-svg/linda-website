@@ -10,7 +10,7 @@ const aboutLinks = [
 
 function DropdownPanel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="absolute left-0 top-full z-50 mt-2 hidden min-w-[14rem] flex-col rounded-lg border border-white/10 bg-surface p-2 shadow-xl group-hover:flex group-focus-within:flex">
+    <div className="absolute left-0 top-full z-50 mt-2 hidden min-w-[14rem] flex-col rounded-lg border border-border bg-surface p-2 shadow-xl group-hover:flex group-focus-within:flex">
       {children}
     </div>
   );
@@ -26,7 +26,7 @@ export function Header() {
   const closeAll = () => setMobileOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border bg-bg/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3 md:flex-nowrap md:px-6">
         <Link href="/" className="text-sm font-semibold text-text hover:text-accent" onClick={closeAll}>
           Dr. Linda Hoffman · Trauma therapy
@@ -34,7 +34,7 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-md border border-white/15 px-3 py-1.5 text-sm text-muted md:hidden"
+          className="rounded-md border border-border px-3 py-1.5 text-sm text-muted md:hidden"
           aria-expanded={mobileOpen}
           aria-controls="site-navigation"
           onClick={() => setMobileOpen((o) => !o)}
@@ -68,7 +68,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-md px-3 py-2 text-sm text-text hover:bg-white/5 hover:text-accent"
+                  className="rounded-md px-3 py-2 text-sm text-text hover:bg-accent/5 hover:text-accent"
                 >
                   {item.label}
                 </Link>
@@ -87,7 +87,7 @@ export function Header() {
       {mobileOpen && (
         <nav
           id="site-navigation"
-          className="flex flex-col gap-1 border-t border-white/10 px-4 py-3 md:hidden"
+          className="flex flex-col gap-1 border-t border-border px-4 py-3 md:hidden"
           aria-label="Main mobile"
         >
           <Link href="/" className="py-2 text-sm text-muted hover:text-accent" onClick={closeAll}>

@@ -43,7 +43,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/trauma-recovery"
-              className="inline-flex justify-center rounded-full border border-white/20 px-6 py-3 text-center text-sm font-medium text-text hover:border-accent/40 hover:text-accent"
+              className="inline-flex justify-center rounded-full border border-border px-6 py-3 text-center text-sm font-medium text-text hover:border-accent/40 hover:text-accent"
             >
               How trauma therapy helps
             </Link>
@@ -96,7 +96,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <div className="relative mt-14 overflow-hidden rounded-2xl border border-white/10 shadow-xl shadow-black/30">
+      <div className="relative mt-14 overflow-hidden rounded-2xl border border-border shadow-xl shadow-black/10">
         <div className="relative aspect-[21/9] min-h-[180px] w-full md:min-h-[240px]">
           <Image
             src="/images/banner-mountains.jpg"
@@ -112,7 +112,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <section className="mt-14 rounded-xl border border-white/10 bg-surface/60 p-6 md:p-8" aria-labelledby="why-heading">
+      <section className="mt-14 rounded-xl border border-border bg-surface/60 p-6 md:p-8" aria-labelledby="why-heading">
         <h2 id="why-heading" className="text-sm font-bold uppercase tracking-wider text-muted">
           Why trauma-focused therapy — and why now?
         </h2>
@@ -138,22 +138,22 @@ export default function HomePage() {
         <h2 id="pillars-heading" className="sr-only">
           What you can expect
         </h2>
-        <div className="rounded-xl border border-white/10 p-5">
+        <div className="rounded-xl border border-border p-5">
           <h3 className="text-sm font-bold uppercase tracking-wide text-accent">Clarity first</h3>
           <p className="mt-3 text-sm text-muted">
             We start with what you want to be different in your life — work, relationships, sleep,
             confidence — and build treatment around outcomes, not jargon.
           </p>
         </div>
-        <div className="rounded-xl border border-white/10 p-5">
+        <div className="rounded-xl border border-border p-5">
           <h3 className="text-sm font-bold uppercase tracking-wide text-accent">Nervous-system care</h3>
           <p className="mt-3 text-sm text-muted">
             Trauma therapy here means working with how survival responses show up today — not only
             analyzing the past from the neck up.
           </p>
         </div>
-        <div className="flex flex-col overflow-hidden rounded-xl border border-white/10">
-          <div className="relative aspect-[16/10] w-full shrink-0 border-b border-white/10">
+        <div className="flex flex-col overflow-hidden rounded-xl border border-border">
+          <div className="relative aspect-[16/10] w-full shrink-0 border-b border-border">
             <Image
               src="/images/telehealth-cozy.jpg"
               alt="Person relaxing at home with a warm drink — suggesting private, comfortable telehealth sessions"
@@ -173,7 +173,7 @@ export default function HomePage() {
       </section>
 
       <section
-        className="mt-14 grid gap-8 border-t border-white/10 pt-12 md:grid-cols-[minmax(0,1fr)_minmax(0,260px)] md:items-start md:gap-10"
+        className="mt-14 grid gap-8 border-t border-border pt-12 md:grid-cols-[minmax(0,1fr)_minmax(0,260px)] md:items-start md:gap-10"
         aria-labelledby="credentials-heading"
       >
         <div>
@@ -201,7 +201,7 @@ export default function HomePage() {
       </section>
 
       <section
-        className="mt-10 rounded-xl border border-white/10 bg-bg p-6 md:p-8"
+        className="mt-10 rounded-xl border border-border bg-bg p-6 md:p-8"
         aria-labelledby="creatives-heading"
       >
         <h2 id="creatives-heading" className="text-lg font-semibold text-text">

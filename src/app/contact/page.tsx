@@ -31,7 +31,7 @@ export default function ContactPage() {
             href="https://www.drlindahoffman.com/contact-260934.html"
             rel="noopener noreferrer"
             target="_blank"
-            className="inline-flex rounded-full border border-accent/40 bg-surface px-4 py-2 text-sm font-semibold text-accent hover:bg-white/5"
+            className="inline-flex rounded-full border border-accent/40 bg-surface px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/5"
           >
             Open contact &amp; forms on drlindahoffman.com ↗
           </a>

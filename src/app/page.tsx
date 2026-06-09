@@ -6,8 +6,7 @@ import { SiteFigure } from "@/components/SiteFigure";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Online Trauma Therapy in California & New York | Dr. Linda Hoffman, PsyD — EMDR & Trauma Specialist",
+    absolute: "Online Trauma Therapy in California & New York | Dr. Linda Hoffman, PsyD",
   },
   description:
     "Ready to feel like yourself again? Licensed trauma therapist Dr. Linda Hoffman offers online trauma therapy, EMDR, and TRM for adults in CA & NY. Free phone consultation.",

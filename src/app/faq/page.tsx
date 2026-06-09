@@ -9,9 +9,62 @@ export const metadata: Metadata = {
   alternates: { canonical: "/faq" },
 };
 
+// Plain-text mirror of the visible Q&A below, used to emit FAQPage structured data.
+// Keep these answers in sync with the on-page copy so the rich result stays accurate.
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "I've never been to therapy. What can I expect?",
+    answer:
+      "The therapeutic process varies depending on the personalities of the psychologist and client and the problems requiring attention. I use many different methods, but you can expect me to be active in sessions, offering my thoughts and perspectives and inviting you to be curious about your own experiences. You will log in to a HIPAA-compliant video platform, and sessions begin with payment. Our first sessions include a comprehensive interview where I collect background information and learn about your goals, after which I share treatment recommendations and next steps.",
+  },
+  {
+    question: "How long are sessions and how often will we meet?",
+    answer:
+      "Psychotherapy sessions most commonly take place weekly and are 50 minutes in length (80 minutes for EMDR). Under certain circumstances the length and frequency may be increased or decreased, but all new clients begin with weekly appointments.",
+  },
+  {
+    question: "What are your fees?",
+    answer:
+      "Standard rates are: 80-minute one-time intake session, $432; 50-minute psychotherapy or EMDR session, $270; 80-minute EMDR session, $432. During your phone consultation we discuss your needs, treatment options, and budgeting. A reduced fee is sometimes available in cases of financial hardship.",
+  },
+  {
+    question: "Do you accept insurance?",
+    answer:
+      "I am out-of-network with all insurance panels. If you have out-of-network benefits through your health insurance plan, you may receive some reimbursement for sessions after meeting any plan deductibles.",
+  },
+  {
+    question: "What forms of payment do you accept?",
+    answer: "All sessions may be paid for using a credit card or debit card.",
+  },
+  {
+    question: "Do I need a diagnosis to be in therapy?",
+    answer:
+      "It depends. Psychotherapy is not simply about symptom reduction but can also be about health, wellness, and self-care, and many people attend therapy without a diagnosis. However, if you need to use health insurance to cover any portion of your therapy, a diagnosis is required to meet the medical necessity standard. I will only give a diagnosis if you meet criteria for one.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Contact me by calling or filling out the phone consultation request form on the contact page. If I'm not currently accepting new clients, I'll send referrals. If I have openings, I'll email you a link to schedule a time to talk, then collect information so you can set up an account in my Patient Portal.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function FaqPage() {
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <h1 className="font-serif text-4xl italic text-text md:text-[2.75rem]">
         Frequently asked questions
       </h1>
